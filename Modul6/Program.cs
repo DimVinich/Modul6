@@ -28,6 +28,77 @@ namespace Modul6
 			Console.ReadKey();
 		}
 
+		class Triangle
+        {
+			double a;
+			double b;
+			double c;
+
+			public double Surface()
+            {
+
+            }
+
+			public double Perimeter()
+            {
+
+            }
+		}
+
+		class Square
+		{
+			double a;
+
+			public double Square()
+			{
+			
+			}
+
+			public double Perimeter()
+			{
+			
+			}
+		}
+
+		class Circle
+		{
+			double r;
+
+			public double Square()
+			{
+			
+			}
+
+			public double Length()
+			{
+			
+			}
+		}
+
+		class Car
+		{
+			public double Fuel;
+			public int Mileage;
+
+			public Car()
+			{
+				Fuel = 50;
+				Mileage = 0;
+			}
+
+			public void Move()
+			{
+				// Move a kilometer
+				Mileage++;
+				Fuel -= 0.5;
+			}
+
+			public void FillTheCar()
+			{
+				Fuel = 50;
+			}
+		}
+
 		class Bus
 		{
 			public int? Load; 

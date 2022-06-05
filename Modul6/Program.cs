@@ -97,12 +97,75 @@ namespace Modul6
 				color = acolor;
 			}
 
-			private string GetColor()
+			public string GetColor()
             {
 				return color;
             }
 		}
+		class User
+		{
+			private int age;
+			public int Age
+			{
+				get
+				{
+					return age;
+				}
 
+				set
+				{
+					if (value < 18)
+					{
+						Console.WriteLine("Возраст должен быть не меньше 18");
+					}
+					else
+					{
+						age = value;
+					}
+				}
+			}
+
+			private string login;
+			public string Login
+			{
+                get
+                {
+					return login;
+                }
+
+				set
+                {
+					if (value.Length < 3)
+                    {
+						Console.WriteLine("Длина логина должна быть не менее 3 симоволов");
+                    }
+                    else
+                    {
+						login = value;
+                    }
+                }
+			}
+
+			private string email;
+			public string Email
+            {
+                get
+                {
+					return email;
+                }
+                set
+                {
+					if (email.Contains('@'))
+                    {
+						email = value; 
+                    }
+                    else
+                    {
+						Console.WriteLine(" почта должна содержать симол @ ");
+					}
+                }
+            }
+		}
 		class Triangle
 		{
 			double a;

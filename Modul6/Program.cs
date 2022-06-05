@@ -28,21 +28,96 @@ namespace Modul6
 			Console.ReadKey();
 		}
 
-		class Triangle
+		enum TurnDirection
+		{
+			None = 0,
+			Left,
+			Right
+		}
+
+		class Car
+		{
+			private double Fuel;
+			private int Mileage;
+			private string color;
+			private TurnDirection turn;
+
+			public Car()
+			{
+				Fuel = 50;
+				Mileage = 0;
+				color = "White";
+			}
+
+			private void Move()
+			{
+				// Move a kilometer
+				Mileage++;
+				Fuel -= 0.5;
+			}
+
+			private void Turn(TurnDirection direction)
+			{
+				turn = direction;
+			}
+
+			public void FillTheCar()
+			{
+				Fuel = 50;
+			}
+
+			public string GetColor()
+			{
+				return color;
+			}
+
+			public void ChangeColor(string newColor)
+			{
+				if (color != newColor)
+					color = newColor;
+			}
+
+			public bool IsTurningLeft()
+			{
+				return turn == TurnDirection.Left;
+			}
+
+			public bool IsTurningRight()
+			{
+				return turn == TurnDirection.Right;
+			}
+		}
+
+		class TrafficLight
         {
+			private string color;
+
+			private void ChangeColor(string acolor) 
+			{
+				color = acolor;
+			}
+
+			private string GetColor()
+            {
+				return color;
+            }
+		}
+
+		class Triangle
+		{
 			double a;
 			double b;
 			double c;
 
 			public double Surface()
-            {
+			{
 
-            }
+			}
 
 			public double Perimeter()
-            {
+			{
 
-            }
+			}
 		}
 
 		class Square
@@ -51,12 +126,12 @@ namespace Modul6
 
 			public double Square()
 			{
-			
+
 			}
 
 			public double Perimeter()
 			{
-			
+
 			}
 		}
 
@@ -66,36 +141,12 @@ namespace Modul6
 
 			public double Square()
 			{
-			
+
 			}
 
 			public double Length()
 			{
-			
-			}
-		}
 
-		class Car
-		{
-			public double Fuel;
-			public int Mileage;
-
-			public Car()
-			{
-				Fuel = 50;
-				Mileage = 0;
-			}
-
-			public void Move()
-			{
-				// Move a kilometer
-				Mileage++;
-				Fuel -= 0.5;
-			}
-
-			public void FillTheCar()
-			{
-				Fuel = 50;
 			}
 		}
 

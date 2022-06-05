@@ -18,10 +18,10 @@ namespace Modul6
 			public int a;
 			public int b;
 
-            Rectngle(int aa, int bb)
+            Rectngle(int aa, int ab)
             {
 				a = aa;
-				b = bb;
+				b = ab;
             }
 
             Rectngle(int aa)

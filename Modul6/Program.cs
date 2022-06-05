@@ -7,10 +7,42 @@ namespace Modul6
 		static void Main(string[] args)
 		{
 
-			Animal animal = new Animal { type = "Собака", name = "Вольт", age = 4};
+			//			Animal animal = new Animal { type = "Собака", name = "Вольт", age = 4};
+			{
+				var department = GetCurrentDepartment();
+			}
+
+			static Department GetCurrentDepartment()
+			{
+				// logic
+				Department department = new Department();
+
+				if(department?.Company?.Type == "Банк" && department?.City?.Name == "Санкт-Петербург")
+				{
+					Console.WriteLine("У банка {0} есть отделение в Санкт-Петербурге", department?.Company?.Name ?? "Неизвестная компания");
+				}
+
+				return department;
+			}
 
 			Console.ReadKey();
+		}
 
+		class Company
+		{
+			public string Type;
+			public string Name;
+		}
+
+		class Department
+		{
+			public Company Company;
+			public City City;
+		}
+
+		class City
+		{
+			public string Name;
 		}
 
 		class Rectngle
